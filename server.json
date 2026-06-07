@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.attestagents/attest-mcp",
+  "title": "Attest",
+  "description": "Scan agent payment endpoints (x402, MPP, AP2, L402, HTTP 402) and get a trust grade A–F with a safety verdict before your AI agent authorizes a payment.",
+  "websiteUrl": "https://attestagent.org",
+  "repository": {
+    "url": "https://github.com/attestagents/Install-attest-agent",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "attest-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ATTEST_BASE_URL",
+          "description": "Override the Attest API base URL. Defaults to https://attestagent.org. Only needed for self-hosting or testing.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://attestagent.org/api/mcp"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "attest-mcp",
+  "version": "1.0.0",
+  "mcpName": "io.github.attestagents/attest-mcp",
+  "description": "MCP server for Attest — scan agent payment endpoints (x402, MPP, AP2, L402, HTTP 402) and get a trust grade A–F with a safety verdict before your AI agent authorizes a payment.",
+  "type": "module",
+  "bin": {
+    "attest-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "mcp-server",
+    "x402",
+    "ap2",
+    "l402",
+    "mpp",
+    "http-402",
+    "agent-payments",
+    "agentic-payments",
+    "ai-agents",
+    "payments",
+    "security",
+    "trust",
+    "scanner",
+    "attest",
+    "anthropic",
+    "claude",
+    "cursor"
+  ],
+  "author": "Attest (https://attestagent.org)",
+  "license": "MIT",
+  "homepage": "https://attestagent.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attestagents/Install-attest-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/attestagents/Install-attest-agent/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.3"
+  }
+}
